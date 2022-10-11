@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "502930233989",
+    "project_id": "wallin-testing1",
+    "storage_bucket": "wallin-testing1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502930233989:android:a98421ad0587f5a863a7ec",
+        "android_client_info": {
+          "package_name": "com.wallin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502930233989-49he0qn9ocplvkruc1rib3met7jedepq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcpnn4hG1vtvalvDiYUNRodwRQYMxpBRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "502930233989-49he0qn9ocplvkruc1rib3met7jedepq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
