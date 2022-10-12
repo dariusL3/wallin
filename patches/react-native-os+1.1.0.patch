@@ -1,0 +1,30 @@
+diff --git a/node_modules/react-native-os/android/build.gradle b/node_modules/react-native-os/android/build.gradle
+index 8b00cd6..a07e86c 100644
+--- a/node_modules/react-native-os/android/build.gradle
++++ b/node_modules/react-native-os/android/build.gradle
+@@ -40,5 +40,5 @@ repositories {
+ }
+ 
+ dependencies {
+-    compile 'com.facebook.react:react-native:+'
++    implementation 'com.facebook.react:react-native:+'
+ }
+diff --git a/node_modules/react-native-os/android/src/main/java/com/peel/react/RNOSModule.java b/node_modules/react-native-os/android/src/main/java/com/peel/react/RNOSModule.java
+index 8519249..c2613c7 100644
+--- a/node_modules/react-native-os/android/src/main/java/com/peel/react/RNOSModule.java
++++ b/node_modules/react-native-os/android/src/main/java/com/peel/react/RNOSModule.java
+@@ -28,10 +28,10 @@ public final class RNOSModule implements ReactPackage {
+         return modules;
+     }
+ 
+-    @Override
+-    public List<Class<? extends JavaScriptModule>> createJSModules() {
+-        return Collections.emptyList();
+-    }
++    // @Override
++    // public List<Class<? extends JavaScriptModule>> createJSModules() {
++    //     return Collections.emptyList();
++    // }
+ 
+     @Override
+     public List<ViewManager> createViewManagers(

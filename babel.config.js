@@ -1,3 +1,5 @@
+const path = require('path');
+
 const commonPlugins = [
   '@babel/plugin-proposal-optional-catch-binding',
   ['transform-class-properties', { spec: true }],
@@ -10,6 +12,7 @@ const commonPlugins = [
   [
     'module-resolver',
     {
+      
       alias: {
         '@src': './src',
         '@models': './src/models',
@@ -19,9 +22,30 @@ const commonPlugins = [
         '@components': './src/components',
         '@screens': './src/screens',
         '@routers':'./src/router',
-        '@lib': './node_modules/incognito-chain-web-js/lib',
+        '@lib': './node_modules/incognito-chain-web-js/lib'
       }
+    }
+  ],
+  [
+    'module-resolver',
+    {
+      root: ".",
+      resolvePath: function(sourcePath, currentFile, opts) {
+        if(sourcePath === 'react-native' && currentFile.includes('node_modules')) {// && currentFile.includes("react-native-gesture-handler") === false  && currentFile.includes("node_modules\\react-native\\") === false){
+     
+          return path.resolve(__dirname, 'resolve/react-native');
+        }
+        /**
+         * The `opts` argument is the options object that is passed through the Babel config.
+         * opts = {
+         *   extensions: [".js"],
+         *   resolvePath: ...,
+         * }
+         */
+        return undefined;
+      },
     },
+    'deprecated-prop-types-problem-resolver'
   ],
   'react-native-reanimated/plugin',
 ];
@@ -48,6 +72,5 @@ module.exports = function(api) {
       ...config.plugins,
     ];
   }
-
   return config;
 };

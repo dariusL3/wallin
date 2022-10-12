@@ -1,0 +1,15 @@
+diff --git a/node_modules/react-native-zmq-service/android/build.gradle b/node_modules/react-native-zmq-service/android/build.gradle
+index 017096c..f64efb1 100644
+--- a/node_modules/react-native-zmq-service/android/build.gradle
++++ b/node_modules/react-native-zmq-service/android/build.gradle
+@@ -36,7 +36,7 @@ repositories {
+ }
+ 
+ dependencies {
+-    compile 'com.facebook.react:react-native:+'
+-    compile group: 'org.zeromq', name: 'jeromq', version: '0.5.1'
++    implementation 'com.facebook.react:react-native:+'
++    implementation group: 'org.zeromq', name: 'jeromq', version: '0.5.1'
+ }
+   
+\ No newline at end of file
